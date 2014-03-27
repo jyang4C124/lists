@@ -86,7 +86,7 @@ public class MyArrayList<E> {
 	 * @param elem
 	 */
 	public void add(int index, E elem) {
-        E[] elementsFromIndexToEnd = newArrayOfE(elements.length - index + 1);
+        E[] elementsFromIndexToEnd = newArrayOfE(elements.length - index + 1); //dont think I need the +1
 
         if (this.currentSize + 1 < elements.length) {
             for(int i =index; i< elements.length; i++){
@@ -103,7 +103,6 @@ public class MyArrayList<E> {
             expandSize();
             add(index,elem);
         }
-
 	}
 	
 	/**
